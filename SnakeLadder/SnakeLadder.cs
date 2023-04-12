@@ -15,7 +15,9 @@ namespace SnakeLadder
         {
             Random random = new Random();
             int DieRoll = random.Next(1, 7);
-            playerPosition = DieRoll;
+            Console.WriteLine("Die Rolled No:" + DieRoll);
+            playerPosition += DieRoll;
+
             int Option = random.Next(0, 3);
             switch (Option)
             {
@@ -31,9 +33,20 @@ namespace SnakeLadder
                     Console.WriteLine("Snake : " + playerPosition);
                     break;
             }
-            Console.WriteLine("Player Position is :" + playerPosition);
-            Console.ReadLine();
+            if (playerPosition < 0)
+                playerPosition = 0;
         }
+        public void PlayingTillWin()
+        {
+            while (playerPosition < 100)
+            {
+                Game();
+            }
+            Console.WriteLine("Player Win");
+        }
+
     }
-    
+
 }
+    
+

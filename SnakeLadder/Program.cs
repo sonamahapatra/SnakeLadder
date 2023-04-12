@@ -12,7 +12,7 @@ namespace SnakeLadder
         {
             SnakeLadder snakeLadder = new SnakeLadder();
             snakeLadder.Game();
-            
+            snakeLadder.PlayingTillWin();
             Console.ReadLine();
         }
     }
