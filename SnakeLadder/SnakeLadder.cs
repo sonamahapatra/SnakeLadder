@@ -8,11 +8,16 @@ namespace SnakeLadder
 {
     public class SnakeLadder
     {
+        public int playerPosition = 0;
+
         public void Game()
         {
-            int playerposition = 0;
-            Console.WriteLine("Player Starting Position :" + playerposition);
+            Random random = new Random();
+            int DieRoll = random.Next(1, 7);
+            playerPosition = DieRoll;
+            Console.WriteLine("Player Position is :" + playerPosition);
             Console.ReadLine();
         }
     }
+    
 }
