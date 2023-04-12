@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace SnakeLadder
 {
-    public class Program
+    public class SnakeLadder
     {
-        public static void Main(string[] args)
+        public void Game()
         {
-            SnakeLadder snakeLadder = new SnakeLadder();
-            snakeLadder.Game();
+            int playerposition = 0;
+            Console.WriteLine("Player Starting Position :" + playerposition);
             Console.ReadLine();
         }
     }
